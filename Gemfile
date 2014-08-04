@@ -13,6 +13,10 @@ group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
 
+group :test do
+  gem 'capybara'
+end
+
 group :development, :test do 
   gem 'spring'
   gem 'rspec-rails', '3.0.2'
