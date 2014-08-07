@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 
 $body-bg:                               #ecf0f1;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:                'Walter Turncoat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                         45px;
 $navbar-default-bg:                     white;
 $navbar-default-brand-color:            #c0392b;
@@ -10,10 +10,59 @@ $jumbotron-bg:                          white;
 
 @import "bootstrap";
 
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  text-align: center;
+}
+
 .center {
   text-align: center;
 }
 
+.center h1 {
+  margin-bottom: 10px;
+}
+
 .navbar-brand {
   font-weight: bold;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
