@@ -14,4 +14,11 @@ describe User do
   it { should respond_to(:longitude) }
   it { should respond_to(:address) }
   it { should respond_to(:username) }
+
+  #it { should be_valid }
+
+  describe "when username not present" do
+    before { @user.username = '' }
+    it { should_not be_valid }
+  end
 end
