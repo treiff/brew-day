@@ -6,7 +6,11 @@
   </h2>
 
   <% if user_signed_in? %>
-    # do something
+    <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'>
+        
+      </div>
+    </div>
   <% else %>
     <p>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-large btn-primary" %>
