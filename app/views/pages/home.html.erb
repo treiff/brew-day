@@ -2,27 +2,29 @@
   <h1>Welcome to Who Brew</h1>
 
   <h2>
-  This is the home page of Who Brew, the brew day app.
+    Connect with fellow brewers near you!
   </h2>
 
   <% if user_signed_in? %>
-    <div style='width: 800px;'>
-      <div id="map" style='width: 800px; height: 400px;'></div>
-    </div>
-
-    <script type="text/javascript">
-        handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-          markers = handler.addMarkers(<%=raw @hash.to_json %>);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-        });
-    </script>
+      Do stuff
   <% else %>
     <p>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-large btn-primary" %>
       <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
     </p>
+
+      <div style='width: 100%;'>
+        <div id="map" style='width: 100%; height: 400px;'></div>
+      </div>
+
+      <script type="text/javascript">
+          handler = Gmaps.build('Google');
+          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+            markers = handler.addMarkers(<%=raw @hash.to_json %>);
+            handler.bounds.extendWith(markers);
+            handler.fitMapToBounds();
+          });
+      </script>
   <% end %>
 </div>
 
