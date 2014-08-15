@@ -12,13 +12,6 @@ describe "Static Pages" do
     it { should_not have_title('| Home') }
   end
 
-  describe "About Page" do
-    before { visit about_path }
-
-    it { should have_content('About') }
-    it { should have_title(full_title('About')) }
-  end
-
   describe "Contact Page" do
     before { visit contact_path }
 
