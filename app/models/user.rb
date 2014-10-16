@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, :uniqueness => { :case_sensitive => false }
   validates :address, presence: true
 
-  #Code for geocoding.
+  #Code for geocoding, added.
   geocoded_by :address
   after_validation :geocode 
 end
