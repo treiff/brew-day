@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe User do
-  before { @user = User.new(email: "newuser@test.com", 
+  before { @user = User.new(email: "newuser@test.com",
                             password: "heyThere45",
-                            latitude: 41.605, 
+                            latitude: 41.605,
                             longitude: -120.559,
                             address: "34 test st., denver CO",
                             username: "tman") }

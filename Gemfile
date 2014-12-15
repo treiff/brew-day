@@ -15,7 +15,7 @@ gem 'devise'
 gem 'gmaps4rails'
 gem 'geocoder'
 
-group :doc do 
+group :doc do
   gem 'sdoc', '~> 0.4.0', require: false
 end
 
@@ -23,7 +23,7 @@ group :test do
   gem 'capybara'
 end
 
-group :development, :test do 
+group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '3.0.2'
   gem 'better_errors'
