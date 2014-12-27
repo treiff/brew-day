@@ -6,7 +6,9 @@
   </h2>
 
   <% if user_signed_in? %>
-     should render new page with specifics on what user is looking to do.
+    <% @closest.each do |closest| %>
+      <p><%= closest.email %></p>
+    <% end %>
   <% else %>
     <p>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-large btn-primary" %>

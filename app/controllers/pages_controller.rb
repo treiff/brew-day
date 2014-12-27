@@ -6,7 +6,15 @@ class PagesController < ApplicationController
       marker.lng user.longitude
       marker.title user.username
     end
+
+    @closest = current_user.nearbys(4000)
   end
+
+  #def closest
+  #  @closest = current_user.nearbys(4000)
+    #@distance =
+  #end
+
 
   def contact
   end
