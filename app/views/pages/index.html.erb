@@ -4,16 +4,9 @@
   <h2>
     Connect with fellow brewers near you!
   </h2>
-
-  <% if user_signed_in? %>
-    <% @closest.each do |closest| %>
-      <p><%= closest.email %></p>
-    <% end %>
-  <% else %>
     <p>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-large btn-primary" %>
       <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
     </p>
     <%= render 'layouts/google_maps' %>
-  <% end %>
 </div>
