@@ -1,5 +1,27 @@
 <% provide(:title, 'Dashboard') %>
 <div class="center">
   <h1>Welcome <%= current_user.username %></h1>
-  <p>Find me in app/views/dashboard/index.html.erb</p>
+  <div class="panel panel-default">
+    <div class="panel-heading">Brewing Near You!</div>
+    <div class="panel-body">
+      <p>This is some filler text..</p>
+      <p>And this is where you at <%= @current_location %></p>
+    </div>
+    <table class="table table-striped">
+      <tr>
+        <th>Username</th>
+        <th>Distance</th>
+        <th>What's Brewing</th>
+      </tr>
+      <% if @nearby != nil %>
+        <% @nearby.each do |user| %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><%= current_user.distance_to(user) %></td>
+            <td>future what's brewing</td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
 </div>
