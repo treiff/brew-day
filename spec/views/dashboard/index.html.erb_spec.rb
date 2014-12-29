@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "dashboard/index.html.erb", :type => :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe 'dashboard/index.html.erb' do
+  context 'when new session is created' do
+    it 'displays near me' do
+      expect(page).to have_content 'Brewing Near You!'
+    end
+  end
 end
