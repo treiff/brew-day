@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :profiles, only: [:index, :show, :update, :destroy]
 
   root 'pages#index'
   match 'help',     to: 'pages#help',      via: 'get'

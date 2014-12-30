@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813144619) do
+ActiveRecord::Schema.define(version: 20141230020148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "brew_sessions", force: true do |t|
+    t.integer  "user_id"
+    t.string   "style"
+    t.datetime "brewing_date"
+    t.string   "public_private"
+  end
+
+  add_index "brew_sessions", ["user_id"], name: "index_brew_sessions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
