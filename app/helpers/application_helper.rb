@@ -1,8 +1,7 @@
 module ApplicationHelper
-  
   # Full title on per-page basis.
   def full_title(page_title)
-    base_title = "Who Brew"
+    base_title = "BrewDay"
     if page_title.empty?
       base_title
     else
