@@ -1,13 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 $body-bg:                               #ecf0f1;
-$font-family-sans-serif:                'Walter Turncoat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:                'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                         45px;
 $navbar-default-bg:                     white;
 $navbar-default-brand-color:            #c0392b;
 $brand-primary:                         #c0392b;
 $jumbotron-bg:                          white;
-$navbar-inverse-border:                 red; 
+$navbar-inverse-border:                 red;
 
 @import "bootstrap";
 

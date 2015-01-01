@@ -32,4 +32,11 @@ describe "Static Pages" do
     it { should have_content('Sign up') }
     it { should have_title(full_title('Sign-up')) }
   end
+
+  describe "Edit profile page" do
+    before { visit edit_user_registration_path }
+
+    it { should have_content('Edit') }
+    it { should have_title(full_title('Edit-profile')) }
+  end
 end
