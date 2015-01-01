@@ -1,17 +1,20 @@
-<h1>Brews for<span class="username"><%= @user.username %></span></h1>
+<div class="center">
+  <h1>Brews for<span class="username"> <%= @user.username %></span></h1>
+  <div class="panel panel-default">
+    <table class="table table-striped">
+      <tr>
+        <th>Style</th>
+        <th>Date</th>
+        <th>Open-Brew?</th>
+      </tr>
 
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Style</th>
-    <th>Open-Brew?</th>
-  </tr>
-
-  <% @brew_sessions.each do |b_session| %>
-    <tr>
-      <li><%= b_session.brewing_date %></li>
-      <li><%= b_session.style %></li>
-      <li><%= b_session.public_private %></li>
-    </tr>
-  <% end %>
-</table>
+      <% @brew_sessions.each do |b_session| %>
+        <tr>
+          <td><%= b_session.style %></td>
+          <td><%= b_session.brewing_date.strftime("Brewing on %m/%d/%y") %></td>
+          <td><%= b_session.public_private %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
