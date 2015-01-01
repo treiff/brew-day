@@ -1,0 +1,17 @@
+<h1>here is the show for </h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Style</th>
+    <th>Open-Brew?</th>
+  </tr>
+
+  <% @brew_sessions.each do |b_session| %>
+    <tr>
+      <li><%= b_session.brewing_date %></li>
+      <li><%= b_session.style %></li>
+      <li><%= b_session.public_private %></li>
+    </tr>
+  <% end %>
+</table>
