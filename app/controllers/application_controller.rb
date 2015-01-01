@@ -13,6 +13,14 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    dashboard_path
+    dashboard_index_path
+  end
+
+  private
+
+  def require_login
+    unless current_user
+      redirect_to user_session_path
+    end
   end
 end

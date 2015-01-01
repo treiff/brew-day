@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :brew_sessions
+  has_many :brew_sessions, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

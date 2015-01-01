@@ -16,7 +16,7 @@
         <% @nearby.each do |user| %>
           <% if user != current_user %>
             <tr>
-              <td><%= link_to 'user.username', user_brew_sessions_path(@user) %></td>
+              <td><%= link_to user.username, dashboard_path(user.id) %></td>
               <td><%= current_user.distance_to(user).round %></td>
               <td><% user.brew_sessions.each do |brew_session| %>
                 <%= brew_session.style %></br>

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   root 'pages#index'
   match 'help',     to: 'pages#help',      via: 'get'
   match 'contact',  to: 'pages#contact',   via: 'get'
-  match 'dashboard', to: 'dashboard#index', via: 'get'
+
+  resources :dashboard, only: [:index, :show]
 end
