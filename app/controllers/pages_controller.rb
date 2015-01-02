@@ -6,6 +6,7 @@ class PagesController < ApplicationController
       marker.lng user.longitude
       marker.title user.username
     end
+    render :layout => 'landing'
   end
 
   def contact
