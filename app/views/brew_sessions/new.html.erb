@@ -20,8 +20,10 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :public_private %>
-        <%= f.text_field :public_private, autocomplete: "off", class: "form-control" %>
+        <%= f.radio_button :public_private, 'Public', :checked => true %>
+        <%= label :public_private_public, 'Public' %>
+        <%= f.radio_button :public_private, 'Private', :value => 'Private' %>
+        <%= label :public_private_public, 'Private' %>
       </div>
 
       <div>

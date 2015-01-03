@@ -6,6 +6,7 @@ class PagesController < ApplicationController
       marker.lng user.longitude
       marker.title user.username
     end
+    @total_brews = BrewSession.count
     render :layout => 'landing'
   end
 
