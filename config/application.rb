@@ -19,6 +19,7 @@ module Brewday
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.precompile += %w(*.pgn *.jpg *.jpeg *.gif *.css *.scss)
+    config.assets.precompile += %w(*.pgn *.jpg *.jpeg *.gif)
+    config.assets.precompile += %w(landing-page.css font-awesome.min.css)
   end
 end
