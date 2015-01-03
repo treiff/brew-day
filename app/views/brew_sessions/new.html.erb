@@ -1,0 +1,32 @@
+<% provide(:title, 'New Brew') %>
+
+<h1>view for brew sessions new</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Schedule a upcoming brew.</h2>
+  </div>
+  <div class="panel-body">
+    <%= form_for [@user, @brew_session] do |f| %>
+
+      <div class="form-group">
+        <%= f.label :style %>
+        <%= f.text_field :style, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :brewing_date %>
+        <%= f.date_field :brewing_date, autocomplete: "off", class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :public_private %>
+        <%= f.text_field :public_private, autocomplete: "off", class: "form-control" %>
+      </div>
+
+      <div>
+        <%= f.submit "Create Brew", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

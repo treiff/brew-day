@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   # For geocoder.
   geocoded_by :address
   after_validation :geocode
+
 end
