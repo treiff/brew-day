@@ -9,7 +9,12 @@ class BrewSessionsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @brew_session = @user.brew_sessions.create(brew_session_params)
-    redirect_to dashboard_path(@user)
+    redirect_to user_brew_sessions_path
+  end
+
+  def index
+    @user = User.find(params[:user_id])
+    @brew_sessions = @user.brew_sessions
   end
 
   private
