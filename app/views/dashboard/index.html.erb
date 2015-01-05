@@ -26,5 +26,6 @@
     </table>
   </div>
  <%= link_to "New BrewSession", new_user_brew_session_path(current_user.id), class: "btn btn-large btn-primary" %>
+ <%= link_to "Edit BrewSessions", user_brew_sessions_path(current_user.id), class: "btn btn-large btn-primary" %>
 </div>
 <div id="brewsession-modal" class="modal hide fade"></div>

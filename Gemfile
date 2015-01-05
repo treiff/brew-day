@@ -3,7 +3,7 @@ ruby '2.1.1'
 
 gem 'rails', '4.1.0'
 gem 'pg'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.0'
 gem 'sprockets'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'

@@ -17,6 +17,21 @@ class BrewSessionsController < ApplicationController
     @brew_sessions = @user.brew_sessions
   end
 
+  def edit
+    @user = User.find(params[:user_id])
+    @brew_session= @user.brew_sessions.find(params[:id])
+  end
+
+  def update
+    @brew_session = BrewSession.find(params[:id])
+
+    if @brew_session.update(brew_session_params)
+      redirect_to user_brew_sessions_path(current_user)
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def brew_session_params

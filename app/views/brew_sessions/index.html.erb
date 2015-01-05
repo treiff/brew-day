@@ -6,6 +6,8 @@
         <th>Style</th>
         <th>Date</th>
         <th>Open-Brew?</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
 
       <% @brew_sessions.each do |b_session| %>
@@ -13,6 +15,12 @@
           <td><%= b_session.style %></td>
           <td><%= b_session.brewing_date.strftime("Brewing on %m/%d/%y") %></td>
           <td><%= b_session.public_private %></td>
+          <td><%= button_to '-', edit_user_brew_session_path(current_user.id, b_session.id), :method=>:get %>
+          </td>
+          <td><button type="button" class="btn btn-default btn-xl">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"</span>
+              </button>
+          </td>
         </tr>
       <% end %>
     </table>
