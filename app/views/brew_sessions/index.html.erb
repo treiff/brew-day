@@ -15,14 +15,11 @@
           <td><%= b_session.style %></td>
           <td><%= b_session.brewing_date.strftime("Brewing on %m/%d/%y") %></td>
           <td><%= b_session.public_private %></td>
-          <td><%= button_to '-', edit_user_brew_session_path(current_user.id, b_session.id), :method=>:get %>
-          </td>
-          <td><button type="button" class="btn btn-default btn-xl">
-                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"</span>
-              </button>
-          </td>
+          <td><%= button_to '-', edit_user_brew_session_path(current_user.id, b_session.id), :method=>:get %></td>
+          <td><%= button_to 'D', user_brew_session_path(current_user.id, b_session.id), method: :delete %></td>
         </tr>
       <% end %>
     </table>
   </div>
+  <%= link_to "Dashboard", dashboard_index_path, class: "btn btn-large btn-default" %>
 </div>

@@ -32,6 +32,12 @@ class BrewSessionsController < ApplicationController
     end
   end
 
+  def destroy
+    @brew_session = BrewSession.find(params[:id])
+    @brew_session.destroy
+    redirect_to user_brew_sessions_path(current_user)
+  end
+
   private
 
   def brew_session_params

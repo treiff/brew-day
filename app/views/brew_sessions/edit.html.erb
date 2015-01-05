@@ -1,6 +1,6 @@
 <% provide(:title, 'New Brew') %>
 
-<h1>Edit Brew Sesions</h1>
+<h1>Edit Brew Sessions</h1>
 
 <div class="panel panel-default">
   <div class="panel-body">
@@ -25,6 +25,7 @@
 
       <div>
         <%= f.submit "Edit Brew", class: "btn btn-primary" %>
+        <%= link_to "Back", dashboard_index_path, class: "btn btn-large btn-default" %>
       </div>
     <% end %>
   </div>
